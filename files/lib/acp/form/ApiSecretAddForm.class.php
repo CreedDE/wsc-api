@@ -13,7 +13,6 @@ use wcf\system\user\storage\UserStorageHandler;
 use wcf\system\WCF;
 use wcf\util\JSON;
 use wcf\util\StringUtil;
-use wcf\util\CryptoUtil;
 use wcf\system\api\ApiSecretPermissionHandler;
 use wcf\data\ApiSecretEditor;
 
@@ -77,7 +76,8 @@ class ApiSecretAddForm extends AbstractForm {
 		if (!empty($_POST['secretKey'])) {
 			$this->secretKey = StringUtil::trim($_POST['secretKey']);
 		} else {
-			$this->secretKey = bin2hex(CryptoUtil::randomBytes(16));
+			$this->secretKey = bin2hex(random_bytes(16));
+			// $this->secretKey = bin2hex(CryptoUtil::randomBytes(16));
 		}
 
 		if (!empty($_POST['secretDescription'])) {
