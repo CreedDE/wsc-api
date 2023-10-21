@@ -8,7 +8,12 @@
 	
 	<nav class="contentHeaderNavigation">
 		<ul>
-			<li><a href="{link application='wcf' controller='ApiSecretList'}{/link}" class="button"><span class="icon icon16 fa-list"></span> <span>{lang}wcf.acp.menu.link.wscApi.secrets.list{/lang}</span></a></li>
+            <li>
+                <a href="{link application='wcf' controller='ApiSecretList'}{/link}" class="button">
+                    {icon name="list"}
+                    {lang}wcf.acp.menu.link.wscApi.secrets.list{/lang}
+                </a>
+            </li>
 			
 			{event name='contentHeaderNavigation'}
 		</ul>
@@ -107,7 +112,6 @@
     
 	<div class="formSubmit">
 		<input type="submit" value="{lang}wcf.global.button.submit{/lang}" accesskey="s">
-		{@SECURITY_TOKEN_INPUT_TAG}
 	</div>
 </form>
 

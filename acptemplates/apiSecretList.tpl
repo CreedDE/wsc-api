@@ -13,7 +13,12 @@
 	
 	<nav class="contentHeaderNavigation">
 		<ul>
-			<li><a href="{link application='wcf' controller='ApiSecretAdd'}{/link}" class="button"><span class="icon icon16 fa-plus"></span> <span>{lang}wcf.acp.menu.link.wscApi.secrets.add{/lang}</span></a></li>
+			<li>
+				<a href="{link application='wcf' controller='ApiSecretAdd'}{/link}" class="button">
+					{icon name="plus"}
+					{lang}wcf.acp.menu.link.wscApi.secrets.add{/lang}
+				</a>
+			</li>
 			
 			{event name='contentHeaderNavigation'}
 		</ul>
